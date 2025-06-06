@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/pruthvesh77/jenkinslab.git'
+                git branch: 'main', url: 'https://github.com/ParthKakadiya09/jenkinslab.git'
             }
         }
         stage('Build') {
             steps {
-                sh 'javac simple.java || exit 1' // Ensure build stops on failure
+                sh 'javac hello.java || exit 1' // Ensure build stops on failure
             }
         }
         stage('Test') {
